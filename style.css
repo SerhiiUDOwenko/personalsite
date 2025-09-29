@@ -1,100 +1,225 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Цифровий проєкт Сергія</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Цифрові рішення для психологічної підтримки військових та цивільних.">
-  <meta name="keywords" content="ЗСУ, психологія, саморегуляція, цифрові інструменти, підтримка">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <header>
-    <h1>Цифровий проєкт</h1>
-    <nav>
-      <a href="#about">Про проєкт</a>
-      <a href="#results">Результати</a>
-      <a href="#support">Підтримати</a>
-      <a href="#contact">Зв’язок</a>
-    </nav>
-  </header>
+/* === Базові кольори та шрифти === */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
-  <section id="profile">
-    <div class="photo">
-      <img src="assets/photo.jpg" alt="Фото автора">
-    </div>
-    <div class="description">
-      <h2>Опис</h2>
-      <p>Я — військовослужбовець ЗСУ, фахівець з психологічної підтримки та цифрових рішень. Створюю інструменти для саморегуляції, адаптації та навчання військових і цивільних.</p>
-    </div>
-  </section>
+:root {
+  --bg-light: #fdf6e3;
+  --bg-dark: #2b2b2b;
+  --text-light: #3e3e3e;
+  --text-dark: #f0f0f0;
+  --accent: #a67c52;
+  --border: #a67c52;
+  --font-sketch: 'Patrick Hand', cursive;
+}
 
-  <section id="about">
-    <h2>Про проєкт</h2>
-    <div class="projects">
-      <img src="assets/project1.jpg" alt="HTML-картки">
-      <img src="assets/project2.jpg" alt="Цифрові техніки">
-      <img src="assets/project3.jpg" alt="Платформа підтримки">
-    </div>
-    <ul class="project-text">
-      <li>Інструменти саморегуляції</li>
-      <li>Психологічна стійкість</li>
-      <li>Освітні цифрові рішення</li>
-    </ul>
-  </section>
+/* === Автоматична тема браузера === */
+body {
+  margin: 0;
+  font-family: var(--font-sketch);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  background-image: url('assets/paper-texture.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  <section id="results">
-    <h2>Результати</h2>
-    <ul>
-      <li>1000+ завантажень</li>
-      <li>Позитивні відгуки від військових</li>
-      <li>Використання в бойових підрозділах</li>
-    </ul>
-  </section>
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    background-image: url('assets/paper-texture-dark.jpg');
+  }
+}
 
-  <section id="support">
-    <h2>Підтримати проєкт</h2>
-    <p>Ваша підтримка допомагає розвивати нові інструменти для військових та цивільних.</p>
-    <div class="donate-links">
-      <a href="https://send.monobank.ua/jar/yourjar" target="_blank">Monobank</a>
-      <a href="https://boosty.to/serhiiudowenko" target="_blank">Boosty</a>
-    </div>
-    <div class="qr-codes">
-      <img src="assets/qr/monobank.png" alt="QR Monobank">
-      <img src="assets/qr/boosty.png" alt="QR Boosty">
-    </div>
-  </section>
+/* === Заголовок === */
+header {
+  padding: 1em;
+  border-bottom: 2px dashed var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <section id="contact">
-    <h2>Зв’язок</h2>
-    <form id="contactForm">
-      <label for="name">Ім’я:</label>
-      <input type="text" id="name" name="name" required>
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+nav {
+  display: flex;
+  gap: 1em;
+}
 
-      <label for="message">Повідомлення:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  border-bottom: 1px dashed var(--border);
+}
 
-      <button type="submit">Надіслати</button>
-    </form>
-  </section>
+/* === Секції === */
+section {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+  border-bottom: 1px dashed var(--border);
+}
 
-  <footer>
-    <div class="contact-info">
-      <p><strong>Email:</strong> serhii@example.com</p>
-      <p><strong>Телефон:</strong> +380 XX XXX XX XX</p>
-    </div>
-    <div class="social-icons">
-      <a href="https://t.me/serhiiudowenko" target="_blank"><img src="assets/icons/telegram.svg" alt="Telegram"></a>
-      <a href="https://facebook.com/serhiiudowenko" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-      <a href="https://www.instagram.com/serhiiudowenko" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://www.linkedin.com/in/serhiiudowenko" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-    </div>
-  </footer>
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* === Фото та опис === */
+#profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.photo img {
+  width: 200px;
+  border: 2px dashed var(--border);
+  border-radius: 4px;
+}
+
+.description p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* === Проєкти === */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.projects img {
+  width: 30%;
+  border: 2px dashed var(--border);
+  border-radius: 4px;
+}
+
+.project-text {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-text li::before {
+  content: '• ';
+  color: var(--accent);
+}
+
+/* === Результати === */
+#results ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#results li::before {
+  content: '– ';
+  color: var(--accent);
+}
+
+/* === Підтримка === */
+.donate-links {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.donate-links a {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px dashed var(--border);
+}
+
+.qr-codes {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.qr-codes img {
+  width: 150px;
+  border: 2px dashed var(--border);
+  border-radius: 4px;
+}
+
+/* === Форма зворотного зв’язку === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1em;
+  border-radius: 8px;
+  border: 2px dashed var(--border);
+}
+
+form input,
+form textarea {
+  padding: 0.5em;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  font-family: var(--font-sketch);
+  background-color: #fff;
+  color: #000;
+}
+
+form button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.7em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px dashed var(--border);
+}
+
+/* === Футер === */
+footer {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 2px dashed var(--border);
+}
+
+.contact-info p {
+  margin: 0.5em 0;
+}
+
+.social-icons a img {
+  width: 32px;
+  margin-right: 0.5em;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+}
+
+/* === Адаптивність === */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+  }
+
+  .projects img {
+    width: 100%;
+  }
+
+  .qr-codes img {
+    width: 100px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+}
