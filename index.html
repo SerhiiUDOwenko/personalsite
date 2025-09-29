@@ -95,6 +95,20 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+
+      if (name && email && message) {
+        alert('Дякуємо за звернення, ' + name + '! Ми зв’яжемось з вами найближчим часом.');
+        this.reset();
+      } else {
+        alert('Будь ласка, заповніть всі поля.');
+      }
+    });
+  </script>
 </body>
 </html>
