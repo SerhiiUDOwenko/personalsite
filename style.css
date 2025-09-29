@@ -17,7 +17,7 @@ body {
   font-family: var(--font-sketch);
   background-color: var(--bg-light);
   color: var(--text-light);
-  background-image: url('assets/paper-texture.jpg');
+  background-image: url('assets/paper-texture.webp');
   background-size: cover;
   background-repeat: repeat;
   transition: background-color 0.3s, color 0.3s;
