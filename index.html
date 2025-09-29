@@ -2,61 +2,82 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Сергій — персональний сайт</title>
+  <title>Цифровий проєкт Сергія</title>
   <link rel="stylesheet" href="style.css">
-  <script src="scripts.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональний сайт Сергія — цифрові рішення, психологічна підтримка, проєкти для військових">
+  <meta name="keywords" content="Сергій, ЗСУ, психологія, саморегуляція, цифрові інструменти, підтримка">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
-    <h1>Сергій</h1>
+    <h1>Цифровий проєкт</h1>
     <nav>
-      <a href="#about">Про мене</a>
-      <a href="#projects">Проєкти</a>
-      <a href="#blog">Блог</a>
-      <a href="#donate">Підтримати</a>
+      <a href="#about">Про проєкт</a>
+      <a href="#contacts">Контакти</a>
     </nav>
   </header>
 
+  <section id="profile">
+    <div class="photo">
+      <img src="assets/photo.jpg" alt="Фото автора">
+    </div>
+    <div class="description">
+      <h2>Опис</h2>
+      <p>Я — військовослужбовець ЗСУ, фахівець з психологічної підтримки та цифрових рішень. Створюю інструменти для саморегуляції, адаптації та навчання військових і цивільних.</p>
+    </div>
+  </section>
+
   <section id="about">
-    <h2>Про мене</h2>
-    <p>Військовослужбовець ЗСУ, фахівець з психологічної підтримки та цифрових рішень. Створюю освітні та управлінські продукти для масштабного використання.</p>
+    <h2>Про проєкт</h2>
+    <div class="projects">
+      <img src="assets/project1.jpg" alt="HTML-картки">
+      <img src="assets/project2.jpg" alt="Цифрові техніки">
+      <img src="assets/project3.jpg" alt="Платформа підтримки">
+    </div>
+    <ul class="project-text">
+      <li>Інструменти саморегуляції</li>
+      <li>Психологічна стійкість</li>
+      <li>Освітні цифрові рішення</li>
+    </ul>
   </section>
 
-  <section id="projects">
-    <h2>Мої проєкти</h2>
-    <div class="gallery">
-      <div class="project">
-        <img src="assets/projects/project1.jpg" alt="Проєкт 1">
-        <h3>HTML-картки для саморегуляції</h3>
-        <p>Цифровий інструмент для військових. <a href="https://gumroad.com/yourproduct">Переглянути</a></p>
-      </div>
-      <!-- Додай інші проєкти аналогічно -->
+  <section id="results">
+    <h2>Результати</h2>
+    <div class="results-content">
+      <ul>
+        <li>1000+ завантажень</li>
+        <li>Позитивні відгуки від військових</li>
+        <li>Використання в бойових підрозділах</li>
+      </ul>
+      <img src="assets/chart.png" alt="Графік ефективності">
     </div>
   </section>
 
-  <section id="blog">
-    <h2>Останній пост</h2>
-    <div id="latest-post">
-      <p>Завантаження...</p>
-    </div>
-  </section>
-
-  <section id="donate">
-    <h2>Підтримати</h2>
-    <p>Ваша підтримка допомагає розвивати нові проєкти.</p>
+  <section id="support">
+    <h2>Підтримати проєкт</h2>
+    <p>Ваша підтримка допомагає розвивати нові інструменти для військових та цивільних.</p>
     <div class="donate-links">
-      <a href="https://boosty.to/s.udowenko/donate">boosty</a>
-      <a href="https://www.buymeacoffee.com/yourname">BuyMeACoffee</a>
+      <a href="https://send.monobank.ua/jar/yourjar" target="_blank">Monobank</a>
+      <a href="https://boosty.to/serhiiudowenko" target="_blank">Boosty</a>
     </div>
     <div class="qr-codes">
       <img src="assets/qr/monobank.png" alt="QR Monobank">
-      <img src="assets/qr/bmc.png" alt="QR BuyMeACoffee">
+      <img src="assets/qr/boosty.png" alt="QR Boosty">
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Сергій. Всі права захищені.</p>
+  <footer id="contacts">
+    <div class="contact-info">
+      <p><strong>Email:</strong> serhii@example.com</p>
+      <p><strong>Телефон:</strong> +380 XX XXX XX XX</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://t.me/serhiiudowenko" target="_blank"><img src="assets/icons/telegram.svg" alt="Telegram"></a>
+      <a href="https://facebook.com/serhiiudowenko" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/serhiiudowenko" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/serhiiudowenko" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+    </div>
   </footer>
 </body>
 </html>
-
