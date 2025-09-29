@@ -1,60 +1,102 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #1a2b4c;
 }
 
 header {
-  background-color: #0057b7;
-  color: white;
+  background-color: #e0e7f5;
   padding: 1em;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #1a2b4c;
 }
 
 nav a {
-  margin: 0 1em;
-  color: white;
+  margin-left: 1em;
   text-decoration: none;
+  color: #1a2b4c;
+  font-weight: bold;
 }
 
 section {
   padding: 2em;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 }
 
-.gallery {
+#profile {
   display: flex;
-  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.photo img {
+  width: 200px;
+  border: 2px solid #1a2b4c;
+}
+
+.description h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.projects {
+  display: flex;
   gap: 1em;
+  margin-bottom: 1em;
 }
 
-.project {
-  width: calc(50% - 1em);
-  background: #fff;
-  border: 1px solid #ddd;
+.projects img {
+  width: 30%;
+  border: 1px solid #1a2b4c;
+}
+
+.project-text {
+  list-style: none;
+  padding: 0;
+}
+
+.project-text li {
+  margin-bottom: 0.5em;
+}
+
+#results .results-content {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+#results ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+#results img {
+  width: 300px;
+  border: 1px solid #1a2b4c;
+}
+
+footer {
+  background-color: #e0e7f5;
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.project img {
-  max-width: 100%;
-  height: auto;
+.contact-info p {
+  margin: 0.5em 0;
 }
 
-.donate-links a {
-  display: inline-block;
-  margin-right: 1em;
-  background: #0057b7;
-  color: white;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 4px;
+.social-icons a img {
+  width: 32px;
+  margin-right: 0.5em;
 }
-
-.qr-codes img {
-  width: 150px;
-  margin: 1em;
-}
-
